@@ -150,12 +150,12 @@ button,input{font:inherit;color:inherit}
   color:var(--sky-700);pointer-events:none;
 }
 .hero-orbits .orbit-wrap{
-  position:absolute;border:1px dashed rgba(3,105,161,.18);border-radius:50%;opacity:.5;
+  position:absolute;border:1px dashed rgba(3,105,161,.18);border-radius:50%;opacity:.65;
 }
 .hero-orbits .orbit-item{
-  position:absolute;top:50%;left:50%;margin-top:-14px;margin-left:-14px;
+  position:absolute;top:0;left:50%;margin-left:-14px;
 }
-.hero-orbits .orbit-item i{display:block;font-size:22px}
+.hero-orbits .orbit-item i{display:block;font-size:24px}
 .hero-orbits .o1{width:480px;height:480px;top:-150px;left:-8%;animation:orbit-spin 60s linear infinite}
 .hero-orbits .o1 .orbit-item{animation:orbit-counter-a 60s linear infinite}
 .hero-orbits .o2{width:360px;height:360px;top:-40px;right:-6%;left:auto;animation:orbit-spin 45s linear infinite reverse}
