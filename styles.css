@@ -144,6 +144,40 @@ button,input{font:inherit;color:inherit}
 .page-head h1{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700}
 .page-head p{margin-top:16px;color:var(--ink-soft);max-width:60ch;font-size:1.04rem}
 
+/* ---------- HERO ORBIT ANIMATION (hero / page-head only) ---------- */
+.hero-orbits{
+  position:absolute;inset:0;z-index:0;overflow:hidden;
+  color:var(--sky-700);pointer-events:none;
+}
+.hero-orbits .orbit-wrap{
+  position:absolute;border:1px dashed rgba(3,105,161,.18);border-radius:50%;opacity:.5;
+}
+.hero-orbits .orbit-item{
+  position:absolute;top:50%;left:50%;margin-top:-14px;margin-left:-14px;
+}
+.hero-orbits .orbit-item i{display:block;font-size:22px}
+.hero-orbits .o1{width:480px;height:480px;top:-150px;left:-8%;animation:orbit-spin 60s linear infinite}
+.hero-orbits .o1 .orbit-item{animation:orbit-counter-a 60s linear infinite}
+.hero-orbits .o2{width:360px;height:360px;top:-40px;right:-6%;left:auto;animation:orbit-spin 45s linear infinite reverse}
+.hero-orbits .o2 .orbit-item{animation:orbit-counter-b 45s linear infinite reverse}
+.hero-orbits .o3{width:300px;height:300px;bottom:-140px;left:8%;animation:orbit-spin 50s linear infinite}
+.hero-orbits .o3 .orbit-item{animation:orbit-counter-a 50s linear infinite}
+.hero-orbits .o4{width:420px;height:420px;bottom:-190px;right:-10%;left:auto;animation:orbit-spin 70s linear infinite reverse}
+.hero-orbits .o4 .orbit-item{animation:orbit-counter-b 70s linear infinite reverse}
+.hero-orbits .o5{width:220px;height:220px;top:-70px;right:22%;left:auto;animation:orbit-spin 38s linear infinite}
+.hero-orbits .o5 .orbit-item{animation:orbit-counter-a 38s linear infinite}
+.hero-orbits .o6{width:190px;height:190px;bottom:-50px;left:-4%;animation:orbit-spin 33s linear infinite reverse}
+.hero-orbits .o6 .orbit-item{animation:orbit-counter-b 33s linear infinite reverse}
+@keyframes orbit-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes orbit-counter-a{from{transform:rotate(0deg)}to{transform:rotate(-360deg)}}
+@keyframes orbit-counter-b{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@media (max-width:760px){
+  .hero-orbits .orbit-item i{font-size:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero-orbits .orbit-wrap,.hero-orbits .orbit-item{animation:none !important}
+}
+
 /* ---------- STRIP ---------- */
 .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
 .strip-inner{display:flex;align-items:center;gap:34px;flex-wrap:wrap;justify-content:center;padding:22px 0}
