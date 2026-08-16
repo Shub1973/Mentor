@@ -295,6 +295,7 @@ table.sched{width:100%;border-collapse:collapse;min-width:640px}
 .slot-open{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;font-weight:600;color:#15803D}
 .slot-open::before{content:"";width:7px;height:7px;border-radius:50%;background:#22C55E;flex:none}
 .slot-full{font-size:.85rem;font-weight:600;color:var(--muted)}
+.slot-note{font-size:.85rem;font-style:italic;color:var(--muted)}
 
 .notes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:26px}
 .note{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:var(--radius-sm);padding:20px}
